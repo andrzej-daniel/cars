@@ -5,8 +5,8 @@ const CANVAS_H = 200;
 const GROUND_Y = 160;
 const GRAVITY = 1.0;
 const JUMP_FORCE = -14.5;
-const GAME_SPEED_INIT = 10;
-const GAME_SPEED_INC = 0.003;
+const GAME_SPEED_INIT = 5;
+const GAME_SPEED_INC = 0.0015;
 
 const VAN_W = 80;
 const VAN_H = 50;
