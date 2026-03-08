@@ -1,5 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Logo } from "./components/Logo";
+import { ServiceVan } from "./components/ServiceVan";
+import { VanGame } from "./components/VanGame";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
@@ -65,20 +67,25 @@ export function App() {
       </header>
 
       {/* Hero */}
-      <section className="bg-alcar-blue py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Wyceń naprawę swojego samochodu
-          </h1>
-          <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-            Otrzymaj szacunkowy koszt naprawy w kilka sekund. Podaj dane swojego auta i opis problemu.
-          </p>
-          <a
-            href="#formularz"
-            className="inline-block bg-q-green hover:bg-q-green-dark text-white font-semibold px-8 py-3 rounded-lg text-lg transition-colors"
-          >
-            Rozpocznij wycenę
-          </a>
+      <section className="bg-alcar-blue py-16 md:py-24 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          <div className="flex-1 text-center md:text-left">
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Wyceń naprawę swojego samochodu
+            </h1>
+            <p className="text-white/70 text-lg md:text-xl max-w-2xl mb-8">
+              Otrzymaj szacunkowy koszt naprawy w kilka sekund. Podaj dane swojego auta i opis problemu.
+            </p>
+            <a
+              href="#formularz"
+              className="inline-block bg-q-green hover:bg-q-green-dark text-white font-semibold px-8 py-3 rounded-lg text-lg transition-colors"
+            >
+              Rozpocznij wycenę
+            </a>
+          </div>
+          <div className="flex-1 flex justify-center">
+            <ServiceVan className="w-full max-w-md drop-shadow-2xl" />
+          </div>
         </div>
       </section>
 
@@ -176,6 +183,19 @@ export function App() {
           )}
         </div>
       </main>
+
+      {/* Mini game */}
+      <section className="py-12 md:py-16 bg-page-bg">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-alcar-blue mb-2 text-center">
+            Van Runner
+          </h2>
+          <p className="text-gray-500 text-center mb-6">
+            Przeskakuj kaktusy busem Q Service! Naciśnij spację lub dotknij ekran.
+          </p>
+          <VanGame />
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="bg-alcar-blue py-10">
