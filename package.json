@@ -1,0 +1,8 @@
+{
+  "name": "cars",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel --filter './packages/*' dev",
+    "build": "pnpm --filter './packages/*' build"
+  }
+}
