@@ -32,13 +32,13 @@ export function App() {
       });
 
       if (!res.ok) {
-        throw new Error("Blad serwera");
+        throw new Error("Błąd serwera");
       }
 
       const data = await res.json();
       setResult(data);
     } catch {
-      setError("Nie udalo sie uzyskac wyceny. Sprobuj ponownie.");
+      setError("Nie udało się uzyskać wyceny. Spróbuj ponownie.");
     } finally {
       setLoading(false);
     }
@@ -55,7 +55,7 @@ export function App() {
               O NAS
             </a>
             <a href="#" className="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors">
-              USLUGI
+              USŁUGI
             </a>
             <a href="#" className="text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors">
               KONTAKT
@@ -68,7 +68,7 @@ export function App() {
       <section className="bg-alcar-blue py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Wycen naprawe swojego samochodu
+            Wyceń naprawę swojego samochodu
           </h1>
           <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-8">
             Otrzymaj szacunkowy koszt naprawy w kilka sekund. Podaj dane swojego auta i opis problemu.
@@ -77,7 +77,7 @@ export function App() {
             href="#formularz"
             className="inline-block bg-q-green hover:bg-q-green-dark text-white font-semibold px-8 py-3 rounded-lg text-lg transition-colors"
           >
-            Rozpocznij wycene
+            Rozpocznij wycenę
           </a>
         </div>
       </section>
@@ -140,7 +140,7 @@ export function App() {
                 <textarea
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
-                  placeholder="Opisz co sie dzieje z samochodem..."
+                  placeholder="Opisz co się dzieje z samochodem..."
                   required
                   rows={4}
                   className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-q-green/50 focus:border-q-green transition-colors resize-vertical"
@@ -152,7 +152,7 @@ export function App() {
                 disabled={loading}
                 className="w-full bg-q-green hover:bg-q-green-dark disabled:bg-gray-400 text-white font-semibold py-3 rounded-lg text-lg transition-colors cursor-pointer disabled:cursor-not-allowed"
               >
-                {loading ? "Wyceniam..." : "Wycen naprawe"}
+                {loading ? "Wyceniam..." : "Wyceń naprawę"}
               </button>
             </form>
           </div>
@@ -184,7 +184,7 @@ export function App() {
             <Logo variant="light" />
             <div className="text-white/60 text-sm space-y-1">
               <p>Q Service Alcar - Profesjonalny serwis samochodowy</p>
-              <p>&copy; {new Date().getFullYear()} Q Service Alcar. Wszelkie prawa zastrzezone.</p>
+              <p>&copy; {new Date().getFullYear()} Q Service Alcar. Wszelkie prawa zastrzeżone.</p>
             </div>
           </div>
         </div>
